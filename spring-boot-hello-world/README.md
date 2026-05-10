@@ -95,13 +95,13 @@ docker build -t rupendra1817/spring-boot-hello-world:1.0.0 .
 docker run -p 8080:8080 spring-boot-hello-world:1.0.0
 
 # Run in detached mode
-docker run -d -p 8080:8080 --name hello-world spring-boot-hello-world:1.0.0
+docker run -d -p 8080:8080 --name spring-boot-hello-world spring-boot-hello-world:1.0.0
 
 # Example with Docker Hub image
-docker run -p 8080:8080 --name hello-world rupendra1817/spring-boot-hello-world:1.0.0
+docker run -p 8080:8080 --name spring-boot-hello-world rupendra1817/spring-boot-hello-world:1.0.0
 
 # Example with Docker Hub image in detached mode
-docker run -d -p 8080:8080 --name hello-world rupendra1817/spring-boot-hello-world:1.0.0
+docker run -d -p 8080:8080 --name spring-boot-hello-world rupendra1817/spring-boot-hello-world:1.0.0
 ```
 
 > 💡 **Note:** If the image is not available locally, Docker will automatically pull it from Docker Hub.
@@ -143,13 +143,13 @@ docker ps -a
 
 ```bash
 # Stop running container
-docker stop hello-world
+docker stop spring-boot-hello-world
 
 # Remove stopped container
-docker rm hello-world
+docker rm spring-boot-hello-world
 
 # Stop and remove in one command
-docker rm -f hello-world
+docker rm -f spring-boot-hello-world
 ```
 
 ### Remove Image
