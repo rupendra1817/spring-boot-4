@@ -105,20 +105,47 @@ docker login
 docker push <your-dockerhub-username>/spring-boot-hello-world:1.0.0
 ```
 
-### Useful Docker Commands
+### Verify Image
+
+```bash
+# List all images
+docker images
+
+# Check specific image
+docker images spring-boot-hello-world
+```
+
+### Verify Container Running
 
 ```bash
 # List running containers
 docker ps
 
-# Stop container
+# List all containers (including stopped)
+docker ps -a
+```
+
+### Stop and Remove Container
+
+```bash
+# Stop running container
 docker stop hello-world
 
-# Remove container
+# Remove stopped container
 docker rm hello-world
 
-# Remove image
+# Stop and remove in one command
+docker rm -f hello-world
+```
+
+### Remove Image
+
+```bash
+# Remove specific image
 docker rmi spring-boot-hello-world:1.0.0
+
+# Remove all unused images
+docker image prune -a
 ```
 
 ---
