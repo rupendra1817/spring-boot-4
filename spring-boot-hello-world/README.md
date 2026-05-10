@@ -83,6 +83,9 @@ docker build -t spring-boot-hello-world:latest .
 
 # Build with custom registry and tag (e.g. Docker Hub)
 docker build -t <your-dockerhub-username>/spring-boot-hello-world:1.0.0 .
+
+# Example with Docker Hub username
+docker build -t rupendra1817/spring-boot-hello-world:1.0.0 .
 ```
 
 ### Run Container
@@ -93,7 +96,15 @@ docker run -p 8080:8080 spring-boot-hello-world:1.0.0
 
 # Run in detached mode
 docker run -d -p 8080:8080 --name hello-world spring-boot-hello-world:1.0.0
+
+# Example with Docker Hub image
+docker run -p 8080:8080 --name hello-world rupendra1817/spring-boot-hello-world:1.0.0
+
+# Example with Docker Hub image in detached mode
+docker run -d -p 8080:8080 --name hello-world rupendra1817/spring-boot-hello-world:1.0.0
 ```
+
+> 💡 **Note:** If the image is not available locally, Docker will automatically pull it from Docker Hub.
 
 ### Push to Registry
 
@@ -103,6 +114,9 @@ docker login
 
 # Push image
 docker push <your-dockerhub-username>/spring-boot-hello-world:1.0.0
+
+# Example with Docker Hub username
+docker push rupendra1817/spring-boot-hello-world:1.0.0
 ```
 
 ### Verify Image
