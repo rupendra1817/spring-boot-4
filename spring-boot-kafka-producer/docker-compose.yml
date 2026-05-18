@@ -1,0 +1,21 @@
+services:
+
+  spring-boot-kafka-producer:
+    build: .
+    image: rupendra1817/spring-boot-kafka-producer:1.0
+    container_name: spring-boot-kafka-producer
+
+    ports:
+      - "8080:8080"
+
+    restart: unless-stopped
+
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka42:29092
+
+    networks:
+      - kafka-network
+
+networks:
+  kafka-network:
+    external: true
